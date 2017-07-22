@@ -21,7 +21,7 @@ class MoviesController < ApplicationController
 
     @movie.save
 
-    render("show")
+    redirect_to '/movies'
   end
 
   def edit
@@ -41,12 +41,15 @@ class MoviesController < ApplicationController
     
     @movie.save
 
-    render("show")
+    redirect_to '/movies/:id'
   end
 
   def destroy
     @movie = Movie.find(params[:id])
 
     @movie.destroy
+    
+    redirect_to '/movies'
+
   end
 end

@@ -19,7 +19,8 @@ class ActorsController < ApplicationController
 
     @actor.save
 
-    render("show")
+    redirect_to '/actors'
+
   end
 
   def edit
@@ -36,13 +37,16 @@ class ActorsController < ApplicationController
 
     @actor.save
 
-    render("show")
+    redirect_to '/actors/:id'
+
   end
 
   def destroy
     @actor = Actor.find(params[:id])
 
     @actor.destroy
+    
+    redirect_to '/actors'
     
   end
 end
