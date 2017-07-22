@@ -36,7 +36,6 @@ class DirectorsController < ApplicationController
 
     @director.save
 
-    redirect_to '/directors/:id'
   end
 
   def destroy

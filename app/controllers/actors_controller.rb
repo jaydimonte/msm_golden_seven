@@ -25,6 +25,7 @@ class ActorsController < ApplicationController
 
   def edit
     @actor = Actor.find(params[:id])
+    
   end
 
   def update_row
@@ -37,7 +38,7 @@ class ActorsController < ApplicationController
 
     @actor.save
 
-    redirect_to '/actors/:id'
+    redirect_to '/actors'
 
   end
 
