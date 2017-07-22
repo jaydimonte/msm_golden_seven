@@ -22,7 +22,7 @@ class DirectorsController < ApplicationController
     render("show")
   end
 
-  def edit_form
+  def edit
     @director = Director.find(params[:id])
   end
 

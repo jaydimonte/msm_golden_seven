@@ -24,7 +24,7 @@ class MoviesController < ApplicationController
     render("show")
   end
 
-  def edit_form
+  def edit
     @movie = Movie.find(params[:id])
   end
 

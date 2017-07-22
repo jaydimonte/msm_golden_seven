@@ -12,7 +12,7 @@ class ActorsController < ApplicationController
 
   def create_row
     @actor = Actor.new
-    @actor.dob = params[:dob]
+    @actor.dob = params[:dob].to_s
     @actor.name = params[:name]
     @actor.bio = params[:bio]
     @actor.image_url = params[:image_url]
@@ -22,7 +22,7 @@ class ActorsController < ApplicationController
     render("show")
   end
 
-  def edit_form
+  def edit
     @actor = Actor.find(params[:id])
   end
 
