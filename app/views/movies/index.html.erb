@@ -2,14 +2,15 @@
   <h1>Movies</h1>
 </div>
 
-<a href="/movies/new_form"> Add a New Movie </a>
+<a href="/movies/new_form"> Add a new movie </a>
 
 
 
-<% @moviess.each do |movie| %>
+<% @movies.each do |movie| %>
 
         <h2><%= movie.title %></h2>
         <p><%= movie.duration %></p>
+        <p><%= movie.year %></p>
         <p><%= movie.description %></p>
         <p><%= movie.image_url %></p>
 

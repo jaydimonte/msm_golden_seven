@@ -2,13 +2,14 @@
   <h1>Directors</h1>
 </div>
 
-<a href="/directors/new_form"> Add a New Director </a>
+<a href="/directors/new_form"> Add a new director </a>
 
 
 <% @directors.each do |director| %>
 
         <h2><%= director.name %></h2>
         <p><%= director.dob %></p>
+        <p><%= director.bio %></p>
         <p><%= director.image_url %></p>
 
       <a href="/directors/<%= director.id %>" class="btn btn-default btn-block">
