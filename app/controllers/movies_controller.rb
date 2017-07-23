@@ -36,7 +36,6 @@ class MoviesController < ApplicationController
     @movie.year = params[:year]
     @movie.duration = params[:duration]
     @movie.description = params[:description]
-    # @movie.director_id = params[:director_id]
     @movie.image_url = params[:image_url]
     
     @movie.save
