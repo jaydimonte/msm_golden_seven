@@ -2,61 +2,44 @@
   <h1>Edit Actor #<%= @actor.id %></h1>
 </div>
 
-<form action="/update_actor/<%= @actor.id %>">
-  <!-- Label and input for dob -->
-  <div class="form-group">
-    <label for="dob" class="col-sm-2 control-label">
-      Dob
-    </label>
-    <div class="col-sm-10">
-      <input type="text" 
-      id="dob" 
-      name="dob" 
-      value="<%= @actor.dob %>">
-    </div>
-  </div>
 
-  <!-- Label and input for name -->
-  <div class="form-group">
-    <label for="name" class="col-sm-2 control-label">
+<form action="/update_actor/<%= @actor.id %>">
+  <div>
+    <label for="name">
       Name
     </label>
-    <div class="col-sm-10">
-      <input type="text" 
-      id="name" 
-      name="name" 
-      value="<%= @actor.name %>">
-    </div>
+
+    <input id="name" type="text" name="name" value="<%= @actor.name %>">
   </div>
 
-  <!-- Label and input for bio -->
-  <div class="form-group">
-    <label for="bio" class="col-sm-2 control-label">
+  <div>
+    <label for="Dob">
+      Dob
+    </label>
+
+    <input id="dob" type="text" name="dob" value="<%= @actor.dob %>">
+  </div>
+
+  <div>
+    <label for="bio">
       Bio
     </label>
-    <div class="col-sm-10">
-      <textarea id="bio" 
-      name="bio" 
-      rows="3"><%= @actor.bio %></textarea>
-    </div>
-  </div>
 
-  <!-- Label and input for image_url -->
-  <div class="form-group">
-    <label for="image_url" class="col-sm-2 control-label">
-      Image url
+    <input id="bio" type="text" name="bio" value="<%= @actor.bio %>">
+  </div>
+ 
+ 
+  <div>
+    <label for="image_url">
+      Image URL
     </label>
-    <div class="col-sm-10">
-      <input type="text" 
-      id="image_url" 
-      name="image_url" 
-      value="<%= @actor.image_url %>">
-    </div>
-  </div>
 
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <input type="submit" value="Edit actor" class="btn btn-primary">
-    </div>
+    <input id="image_url" type="text" name="image_url" value="<%= @actor.image_url %>">
   </div>
+ 
+  <button>
+    Edit actor
+  </button>
 </form>
+
+
