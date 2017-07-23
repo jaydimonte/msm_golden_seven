@@ -2,60 +2,41 @@
   <h1>Edit Movie #<%= @movie.id %></h1>
 </div>
 
-<form action="/update_movie/<%= @movie.id %>" class="form-horizontal">
-  <!-- Label and input for title -->
-  <div class="form-group">
-    <label for="title" class="col-sm-2 control-label">
+<form action="/update_movie/<%= @movie.id %>">
+  <div>
+    <label for="title">
       Title
     </label>
-    <div class="col-sm-10">
-      <input type="text" id="title" name="title" placeholder="Title" class="form-control" value="<%= @movie.title %>">
-    </div>
+
+    <input id="title" type="text" name="title" value="<%= @movie.title %>">
   </div>
 
-  <!-- Label and input for year -->
-  <div class="form-group">
-    <label for="year" class="col-sm-2 control-label">
-      Year
-    </label>
-    <div class="col-sm-10">
-      <input type="text" id="year" name="year" placeholder="Year" class="form-control" value="<%= @movie.year %>">
-    </div>
-  </div>
-
-  <!-- Label and input for duration -->
-  <div class="form-group">
-    <label for="duration" class="col-sm-2 control-label">
+  <div>
+    <label for="duration">
       Duration
     </label>
-    <div class="col-sm-10">
-      <input type="text" id="duration" name="duration" placeholder="Duration" class="form-control" value="<%= @movie.duration %>">
-    </div>
+
+    <input id="duration" type="text" name="duration" value="<%= @movie.duration %>">
   </div>
 
-  <!-- Label and input for description -->
-  <div class="form-group">
-    <label for="description" class="col-sm-2 control-label">
+  <div>
+    <label for="description">
       Description
     </label>
-    <div class="col-sm-10">
-      <textarea id="description" name="description" placeholder="Description" class="form-control" rows="3"><%= @movie.description %></textarea>
-    </div>
-  </div>
 
-  <!-- Label and input for image_url -->
-  <div class="form-group">
-    <label for="image_url" class="col-sm-2 control-label">
-      Image url
+    <input id="description" type="text" name="description" value="<%= @movie.description %>">
+  </div>
+ 
+ 
+  <div>
+    <label for="image_url">
+      Image URL
     </label>
-    <div class="col-sm-10">
-      <input type="text" id="image_url" name="image_url" placeholder="Image url" class="form-control" value="<%= @movie.image_url %>">
-    </div>
-  </div>
 
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <input type="submit" value="Edit movie" class="btn btn-primary">
-    </div>
+    <input id="image_url" type="text" name="image_url" value="<%= @movie.image_url %>">
   </div>
+ 
+  <button>
+    Update movie
+  </button>
 </form>

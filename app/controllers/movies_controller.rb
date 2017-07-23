@@ -40,6 +40,9 @@ class MoviesController < ApplicationController
     @movie.image_url = params[:image_url]
     
     @movie.save
+    
+    redirect_to("/movies/#{@movie.id}")
+
 
   end
 
